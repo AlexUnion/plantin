@@ -1,3 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #E5E5E5;
+}
 
+header {
+  height: 64px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+header .left-side {
+  height: auto;
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .left-side .left-side-item {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+header .left-side .left-side-item ul {
+  margin: 0;
+  padding: 0;
+}
+header .left-side .left-side-item ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 24px;
+}
+header .left-side .left-side-item ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+header .left-side .left-side-item ul li a:hover {
+  text-decoration: underline;
+}
+header .left-side .left-side-item ul li:last-child {
+  margin-right: 0;
+}
+header .right-side {
+  height: auto;
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .right-side .right-side-item {
+  padding: 0;
+  display: inline-block;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=style.css.map */
