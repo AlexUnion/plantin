@@ -1,11 +1,15 @@
-$white: #fff;
-$main-gray: #E5E5E5;
+@import "variables";
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background-color: $main-gray;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
@@ -37,13 +41,8 @@ header {
           display: inline-block;
           margin-right: 24px;
 
-          a {
-            text-decoration: none;
-            color: inherit;
-
-            &:hover {
-              text-decoration: underline;
-            }
+          a:hover {
+            text-decoration: underline;
           }
           &:last-child {
           margin-right: 0;
@@ -66,6 +65,82 @@ header {
       background-color: inherit;
       border: none;
       cursor: pointer;
+    }
+  }
+}
+
+main {
+  .content {
+    width: 1074px;
+    margin: 0 auto;
+
+    .breadcrumbs {
+      margin-top: 24px;
+      .breadcrumbs-item {
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 16px;
+        color: #91A0B6;
+        margin-right: 18px;
+
+        &::after {
+          content: " > ";
+          color: #a6aeb6;
+          margin-left: 18px;
+        }
+      }
+    }
+
+    .search-block {
+      position: relative;
+      background-color: rgba(4, 191, 148, 0.16);
+      margin-top: 48px;
+      border-radius: 16px;
+      padding: 45px 60px 56px;
+
+      .search-title {
+        color: #04BF94;
+        font-weight: 800;
+        font-size: 32px;
+      }
+      .search-subtitle {
+        margin-top: 19px;
+        font-weight: 500;
+        font-size: 18px;
+
+        b,
+        strong {
+          font-weight: 700;
+        }
+      }
+      form {
+        margin-top: 16px;
+        display: flex;
+        justify-content: flex-start;
+
+        .search-item {
+          border: none;
+        }
+        #search {
+          padding: 16px;
+          width: 468px;
+          border-radius: 12px 0 0 12px;
+        }
+        button {
+          border-radius: 0 12px 12px 0;
+          padding: 0 19px;
+          background-color: $white;
+          cursor: pointer;
+        }
+      }
+
+      .search-background {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 380px;
+        height: 259px;
+      }
     }
   }
 }

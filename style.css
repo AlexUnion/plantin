@@ -5,6 +5,11 @@ body {
   background-color: #E5E5E5;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   height: 64px;
   padding: 0 20px;
@@ -34,10 +39,6 @@ header .left-side .left-side-item ul li {
   display: inline-block;
   margin-right: 24px;
 }
-header .left-side .left-side-item ul li a {
-  text-decoration: none;
-  color: inherit;
-}
 header .left-side .left-side-item ul li a:hover {
   text-decoration: underline;
 }
@@ -57,6 +58,73 @@ header .right-side .right-side-item {
   background-color: inherit;
   border: none;
   cursor: pointer;
+}
+
+main .content {
+  width: 1074px;
+  margin: 0 auto;
+}
+main .content .breadcrumbs {
+  margin-top: 24px;
+}
+main .content .breadcrumbs .breadcrumbs-item {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 16px;
+  color: #91A0B6;
+  margin-right: 18px;
+}
+main .content .breadcrumbs .breadcrumbs-item::after {
+  content: " > ";
+  color: #a6aeb6;
+  margin-left: 18px;
+}
+main .content .search-block {
+  position: relative;
+  background-color: rgba(4, 191, 148, 0.16);
+  margin-top: 48px;
+  border-radius: 16px;
+  padding: 45px 60px 56px;
+}
+main .content .search-block .search-title {
+  color: #04BF94;
+  font-weight: 800;
+  font-size: 32px;
+}
+main .content .search-block .search-subtitle {
+  margin-top: 19px;
+  font-weight: 500;
+  font-size: 18px;
+}
+main .content .search-block .search-subtitle b,
+main .content .search-block .search-subtitle strong {
+  font-weight: 700;
+}
+main .content .search-block form {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-start;
+}
+main .content .search-block form .search-item {
+  border: none;
+}
+main .content .search-block form #search {
+  padding: 16px;
+  width: 468px;
+  border-radius: 12px 0 0 12px;
+}
+main .content .search-block form button {
+  border-radius: 0 12px 12px 0;
+  padding: 0 19px;
+  background-color: #fff;
+  cursor: pointer;
+}
+main .content .search-block .search-background {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 380px;
+  height: 259px;
 }
 
 /*# sourceMappingURL=style.css.map */
