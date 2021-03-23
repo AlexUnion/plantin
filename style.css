@@ -26,6 +26,11 @@ h3 {
   font-size: 24px;
 }
 
+b,
+strong {
+  font-weight: 700;
+}
+
 header {
   height: 64px;
   padding: 0 20px;
@@ -95,48 +100,64 @@ main .content .breadcrumbs .breadcrumbs-item::after {
   color: #a6aeb6;
   margin-left: 18px;
 }
-main .content .search-block {
+main .content .green-block {
   position: relative;
   background-color: rgba(4, 191, 148, 0.16);
-  margin-top: 48px;
   border-radius: 16px;
-  padding: 45px 60px 56px;
 }
-main .content .search-block .search-title {
+main .content .green-block .logo {
+  margin: 0;
+  padding: 0;
+}
+main .content .green-block .green-title,
+main .content .green-block .green-small-title {
   color: #04BF94;
-  font-weight: 800;
   font-size: 32px;
 }
-main .content .search-block .search-subtitle {
-  margin-top: 19px;
+main .content .green-block .green-title {
+  font-weight: 800;
+}
+main .content .green-block .green-small-title {
+  font-weight: 500;
+}
+main .content .green-block .green-subtitle {
   font-weight: 500;
   font-size: 18px;
 }
-main .content .search-block .search-subtitle b,
-main .content .search-block .search-subtitle strong {
-  font-weight: 700;
-}
-main .content .search-block form {
+main .content .green-block form {
   margin-top: 16px;
   display: flex;
   justify-content: flex-start;
 }
-main .content .search-block form .search-item {
+main .content .green-block form .search-item {
   border: none;
 }
-main .content .search-block form #search {
+main .content .green-block form #search {
   padding: 16px;
   width: 468px;
   border-radius: 12px 0 0 12px;
 }
-main .content .search-block form button {
+main .content .green-block form button {
   border-radius: 0 12px 12px 0;
   padding: 0 19px;
   background-color: #fff;
   cursor: pointer;
 }
-main .content .search-block .search-background {
+main .content .green-block .green-btn {
+  text-transform: capitalize;
+  background-color: #04BF94;
+  color: white;
+}
+main .content .green-block .green-background {
   position: absolute;
+}
+main .content .green-block .add-background {
+  width: 336px;
+  height: 261px;
+  top: -9px;
+  right: -15px;
+}
+main .content .green-block .search-background {
   right: 0;
   bottom: 0;
   width: 380px;
@@ -167,6 +188,9 @@ main .content .new {
 }
 .flex-container .flex-item-336 {
   width: 336px;
+}
+.flex-container .flex-item-336:nth-child(n+4) {
+  margin-top: 56px;
 }
 
 .time {
@@ -204,20 +228,54 @@ main .content .new {
   margin-top: 16px;
 }
 
+.search-block {
+  padding: 45px 60px 56px;
+}
+
 .radius-12 {
   border-radius: 12px;
+}
+
+.mt-8 {
+  margin-top: 8px;
 }
 
 .mt-16 {
   margin-top: 16px;
 }
 
-.mb-56 {
-  margin-bottom: 56px;
+.mt-19 {
+  margin-top: 19px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mt-48 {
+  margin-top: 48px;
+}
+
+.mt-56 {
+  margin-top: 56px;
 }
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.btn {
+  padding: 8px 32px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+  line-height: 24px;
+}
+
+.p-24 {
+  padding: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */

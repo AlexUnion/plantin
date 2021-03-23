@@ -25,6 +25,10 @@ h2 {
 h3 {
   font-size: 24px;
 }
+b,
+strong {
+  font-weight: 700;
+}
 
 header {
   height: 64px;
@@ -105,27 +109,31 @@ main {
       }
     }
 
-    .search-block {
+    .green-block {
       position: relative;
       background-color: rgba(4, 191, 148, 0.16);
-      margin-top: 48px;
       border-radius: 16px;
-      padding: 45px 60px 56px;
 
-      .search-title {
-        color: #04BF94;
-        font-weight: 800;
+      .logo {
+        margin: 0;
+        padding: 0;
+      }
+
+      .green-title,
+      .green-small-title {
+        color: $green;
         font-size: 32px;
       }
-      .search-subtitle {
-        margin-top: 19px;
+      .green-title {
+        font-weight: 800;
+      }
+      .green-small-title {
+        font-weight: 500;
+
+      }
+      .green-subtitle {
         font-weight: 500;
         font-size: 18px;
-
-        b,
-        strong {
-          font-weight: 700;
-        }
       }
       form {
         margin-top: 16px;
@@ -147,9 +155,21 @@ main {
           cursor: pointer;
         }
       }
-
-      .search-background {
+      .green-btn {
+        text-transform: capitalize;
+        background-color: $green;
+        color: white;
+      }
+      .green-background {
         position: absolute;
+      }
+      .add-background {
+        width: 336px;
+        height: 261px;
+        top: -9px;
+        right: -15px;
+      }
+      .search-background {
         right: 0;
         bottom: 0;
         width: 380px;
@@ -186,6 +206,10 @@ main {
 
   .flex-item-336 {
     width: 336px;
+
+    &:nth-child(n+4) {
+      margin-top: 56px;
+    }
   }
 }
 
@@ -225,16 +249,44 @@ main {
     margin-top: 16px;
   }
 }
+.search-block {
+  padding: 45px 60px 56px;
+}
 
 .radius-12 {
   border-radius: 12px;
 }
+.mt-8 {
+  margin-top: 8px;
+}
 .mt-16 {
   margin-top: 16px;
 }
-.mb-56 {
-  margin-bottom: 56px;
+.mt-19 {
+   margin-top: 19px;
+ }
+.mt-24 {
+    margin-top: 24px;
+  }
+.mt-48 {
+     margin-top: 48px;
+   }
+.mt-56 {
+  margin-top: 56px;
 }
+
 .flex-wrap {
   flex-wrap: wrap;
+}
+.btn {
+  padding: 8px 32px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+  line-height: 24px;
+}
+.p-24 {
+  padding: 24px;
 }
