@@ -10,10 +10,20 @@ a {
   color: inherit;
 }
 
-h2 {
+h1,
+h2,
+h3 {
+  color: #242424;
   font-weight: 700;
-  font-size: 48px;
   margin: 0;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 24px;
 }
 
 header {
@@ -155,9 +165,8 @@ main .content .new {
 .flex-container .flex-container-item {
   width: 49%;
 }
-.flex-container .flex-container-item .article-img {
-  width: 100%;
-  border-radius: 12px;
+.flex-container .flex-item-336 {
+  width: 336px;
 }
 
 .time {
@@ -166,17 +175,49 @@ main .content .new {
   font-size: 16px;
 }
 
+.news .news-img {
+  width: 100%;
+}
 .news .news-title {
   margin-top: 8px;
 }
 .news .news-description {
   margin-top: 16px;
-}
-
-.article-description {
   font-weight: 400;
   font-size: 16px;
   color: #78787A;
+}
+
+.line-container {
+  margin-top: 56px;
+}
+.line-container .line {
+  height: 1px;
+  width: 100%;
+  background-color: #C4C4C4;
+}
+.line-container .line-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  color: #91A0B6;
+  margin-top: 16px;
+}
+
+.radius-12 {
+  border-radius: 12px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mb-56 {
+  margin-bottom: 56px;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=style.css.map */
