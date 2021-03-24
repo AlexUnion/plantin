@@ -24,6 +24,11 @@ h3 {
 h2 {
   font-size: 48px;
 }
+@media screen and (max-width: 400px) {
+  h2 {
+    font-size: 24px;
+  }
+}
 
 h3 {
   font-size: 24px;
@@ -50,15 +55,23 @@ header {
   align-items: center;
   background-color: #fff;
 }
+@media screen and (max-width: 400px) {
+  header {
+    padding: 16px;
+  }
+}
 header .left-side {
   height: auto;
   width: 650px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+@media screen and (min-width: 400px) {
+  header .left-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 header .left-side .left-side-item {
-  display: inline-block;
   margin: 0;
   padding: 0;
 }
@@ -68,6 +81,11 @@ header .left-side .left-side-item li {
 }
 header .left-side .left-side-item li:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 400px) {
+  header .left-side .left-side-item:last-child {
+    display: none;
+  }
 }
 header .right-side {
   height: auto;
@@ -84,89 +102,96 @@ header .right-side .right-side-item {
   cursor: pointer;
 }
 
-main .content {
-  width: 1074px;
-  margin: 0 auto;
-}
-main .content .breadcrumbs {
+main .breadcrumbs {
   margin-top: 24px;
 }
-main .content .breadcrumbs .breadcrumbs-item {
+main .breadcrumbs .breadcrumbs-item {
   text-transform: capitalize;
   font-weight: 500;
   font-size: 16px;
   color: #91A0B6;
   margin-right: 18px;
 }
-main .content .breadcrumbs .breadcrumbs-item::after {
+main .breadcrumbs .breadcrumbs-item::after {
   content: " > ";
   color: #a6aeb6;
   margin-left: 18px;
 }
-main .content .green-block {
+main .green-block {
   position: relative;
   background-color: rgba(4, 191, 148, 0.16);
   border-radius: 16px;
 }
-main .content .green-block .logo {
+main .green-block .logo {
   margin: 0;
   padding: 0;
 }
-main .content .green-block .green-title,
-main .content .green-block .green-small-title {
+main .green-block .green-title,
+main .green-block .green-small-title {
   color: #04BF94;
   font-size: 32px;
 }
-main .content .green-block .green-title {
+main .green-block .green-title {
   font-weight: 800;
 }
-main .content .green-block .green-small-title {
+main .green-block .green-small-title {
   font-weight: 500;
 }
-main .content .green-block .green-subtitle {
+main .green-block .green-subtitle {
   font-weight: 500;
   font-size: 18px;
 }
-main .content .green-block form {
+main .green-block form {
   margin-top: 16px;
   display: flex;
   justify-content: flex-start;
 }
-main .content .green-block form .search-item {
+main .green-block form .search-item {
   border: none;
 }
-main .content .green-block form #search {
+main .green-block form #search {
   padding: 16px;
   width: 468px;
   border-radius: 12px 0 0 12px;
 }
-main .content .green-block form button {
+main .green-block form button {
   border-radius: 0 12px 12px 0;
   padding: 0 19px;
   background-color: #fff;
   cursor: pointer;
 }
-main .content .green-block .green-btn {
+@media screen and (max-width: 1074px) {
+  main .green-block form #search {
+    width: auto;
+    flex: 1;
+  }
+}
+main .green-block .green-btn {
   text-transform: capitalize;
   background-color: #04BF94;
   color: white;
 }
-main .content .green-block .green-background {
+main .green-block .green-background {
   position: absolute;
 }
-main .content .green-block .add-background {
+@media screen and (max-width: 1074px) {
+  main .green-block .green-background {
+    display: none;
+  }
+}
+main .green-block .add-background {
   width: 336px;
   height: 261px;
   top: -9px;
   right: -15px;
 }
-main .content .green-block .search-background {
+main .green-block .search-background {
   right: 0;
   bottom: 0;
   width: 380px;
   height: 259px;
 }
-main .content .new {
+main .new {
   margin-top: 48px;
   width: 78px;
   height: 36px;
@@ -181,6 +206,16 @@ main .content .new {
   border-radius: 5px;
 }
 
+.content {
+  width: 1074px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1074px) {
+  .content {
+    width: 98%;
+  }
+}
+
 .flex-container {
   margin-top: 16px;
   display: flex;
@@ -192,8 +227,19 @@ main .content .new {
 .flex-container .flex-item-336 {
   width: 336px;
 }
-.flex-container .flex-item-336:nth-child(n+4) {
-  margin-top: 56px;
+@media screen and (min-width: 1074px) {
+  .flex-container .flex-item-336:nth-child(n+4) {
+    margin-top: 56px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .flex-container .flex-item-336,
+.flex-container .flex-container-item {
+    width: 100%;
+  }
 }
 
 .time {
@@ -209,10 +255,18 @@ main .content .new {
   margin-top: 8px;
 }
 .news .news-description {
-  margin-top: 16px;
+  margin: 16px 0 0;
   font-weight: 400;
   font-size: 16px;
   color: #78787A;
+}
+@media screen and (max-width: 400px) {
+  .news .news-article {
+    margin-top: 16px;
+  }
+  .news .news-description {
+    margin: 8px 0 0;
+  }
 }
 
 .line-container {
@@ -232,7 +286,14 @@ main .content .new {
 }
 
 .search-block {
+  margin-top: 48px;
   padding: 45px 60px 56px;
+}
+@media screen and (max-width: 400px) {
+  .search-block {
+    padding: 22px 16px;
+    margin-top: 24px;
+  }
 }
 
 footer {
@@ -241,8 +302,6 @@ footer {
   margin: 96px 0 16px;
 }
 footer .footer-wrapper {
-  width: 1074px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -300,6 +359,23 @@ footer .footer-wrapper li:nth-child(-n+2)::after {
 
 .p-24 {
   padding: 24px;
+}
+
+@media screen and (max-width: 400px) {
+  .new {
+    margin-top: 24px !important;
+  }
+
+  .line-container {
+    margin-top: 23px !important;
+  }
+
+  .article:nth-child(n+2) {
+    margin-top: 16px;
+  }
+  .article img {
+    border-radius: 12px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
