@@ -58,12 +58,12 @@ header {
 
   .left-side {
     height: auto;
-    width: 650px;
 
     @media screen and (min-width: $mobile) {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 650px;
     }
 
     .left-side-item {
@@ -143,11 +143,12 @@ main {
     }
     .green-small-title {
       font-weight: 500;
-
+      margin-top: 24px;
     }
     .green-subtitle {
       font-weight: 500;
       font-size: 18px;
+      margin-top: 8px;
     }
     form {
       margin-top: 16px;
@@ -180,6 +181,7 @@ main {
       text-transform: capitalize;
       background-color: $green;
       color: white;
+      margin-top: 24px;
     }
     .green-background {
       position: absolute;
@@ -199,6 +201,17 @@ main {
       bottom: 0;
       width: 380px;
       height: 259px;
+    }
+    @media screen and (max-width: $mobile) {
+      .green-small-title {
+        margin-top: 16px;
+        font-weight: 800;
+        font-size: 24px;
+      }
+      .green-btn {
+        width: 100%;
+        margin-top: 16px;
+      }
     }
   }
 
@@ -223,7 +236,8 @@ main {
   margin: 0 auto;
 
   @media screen and (max-width: $desktop) {
-    width: 98%;
+    width: auto;
+    padding: 0 16px;
   }
 }
 
@@ -309,6 +323,31 @@ main {
     margin-top: 24px;
   }
 }
+.try-block {
+  margin-top: 56px;
+  padding: 24px;
+
+  @media screen and (max-width: $mobile) {
+    margin-top: 24px;
+    padding: 16px;
+  }
+}
+.other {
+  margin-top: 56px;
+
+  @media screen and (max-width: $mobile) {
+    margin-top: 24px;
+
+    .other-article:nth-child(n+2) {
+      margin-top: 24px;
+    }
+    .other-article {
+      img {
+        border-radius: 12px;
+      }
+    }
+  }
+}
 
 footer {
   width: 100%;
@@ -329,6 +368,42 @@ footer {
         margin-left: 24px;
       }
     }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .footer-wrapper {
+      flex-direction: column;
+
+      ul {
+        width: 100%;
+        text-align: center;
+
+        li {
+          display: block;
+          width: 100%;
+          margin-bottom: 8px;
+
+          &::after {
+            content: '' !important;
+            margin: 0 !important;
+          }
+        }
+      }
+
+      div {
+        text-align: center;
+        width: 65%;
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+#menu {
+  display: none;
+
+  @media screen and (max-width: $mobile) {
+    display: block;
   }
 }
 
@@ -366,9 +441,6 @@ footer {
   border-radius: 8px;
   line-height: 24px;
 }
-.p-24 {
-  padding: 24px;
-}
 
 @media screen and (max-width: $mobile){
   .new {
@@ -385,5 +457,8 @@ footer {
     img {
       border-radius: 12px;
     }
+  }
+  #logIn {
+    display: none;
   }
 }
